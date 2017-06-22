@@ -1,0 +1,17 @@
+Scala function to fetch environment variables
+
+%spark
+sc.version
+sc.getConf.get("spark.home")
+System.getenv().get("PYTHONPATH")
+System.getenv().get("SPARK_HOME")
+
+
+
+Creating RDDs
+%pyspark
+
+input_file = "hdfs:///tmp/kddcup.data_10_percent.gz"
+
+raw_rdd = sc.textFile(input_file)
+
