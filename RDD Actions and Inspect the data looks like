@@ -1,0 +1,8 @@
+RDD Actions
+%pyspark
+
+print raw_rdd.count()
+
+Inspect the data looks like
+%pyspark
+print raw_rdd.take(5)
