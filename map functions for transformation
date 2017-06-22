@@ -1,0 +1,10 @@
+%pyspark
+
+def parse_interaction(line):
+    elems = line.split(",")
+    tag = elems[41]
+    return (tag, elems)
+    
+key_csv_rdd = raw_rdd.map(parse_interaction)
+head_rows = key_csv_rdd.take(5)
+pprint(head_rows[0])
