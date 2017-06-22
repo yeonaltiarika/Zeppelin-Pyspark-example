@@ -1,0 +1,9 @@
+%pyspark
+
+from pprint import pprint
+
+csv_rdd = raw_rdd.map(lambda x: x.split(","))
+
+head_rows = csv_rdd.take(5)
+
+pprint(head_rows[0])
