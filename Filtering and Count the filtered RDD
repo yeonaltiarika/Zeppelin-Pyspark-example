@@ -1,0 +1,10 @@
+Filtering lines in the data
+%pyspark
+normal_raw_rdd = raw_rdd.filter(lambda x: 'normal.' in x)
+
+Count the filtered RDD
+%pyspark
+
+normal_count = normal_raw_rdd.count()
+
+print normal_count
